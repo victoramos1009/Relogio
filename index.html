@@ -4,26 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>RELOGIO</title>
 </head>
-<body onload="startTime()">
-    <h2>Relogio para teste</h2>
-    <div id="txt"></div>
-    <script>
-        function startTime(){
-            const today = new Date();
-            let h = today.getHours();
-            let m = today.getMinutes();
-            let s = today.getSeconds();
-            m = checkTime(m);
-            s = checkTime(s);
-            document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
-            setTimeout(startTime, 1000);
-        }
-        function checkTime(i){
-            if(i < 10) {i = "0" + i};
-            return i;
-        }
-    </script>
+<body>
+    <div class="relogio">
+        <div>
+            <span class="tempo">horas</span>
+            <span id="horas">00</span>
+        </div>
+
+        <div>
+            <span class="tempo">minutos</span>
+            <span id="minutos">00</span>
+        </div>
+
+        <div>
+            <span class="tempo">segundos</span>
+            <span id="segundos">00</span>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
